@@ -8,7 +8,7 @@ const user_router=require('./User/routes/user_router')
 
 var PORT= process.env.PORT || 80;
 
-mongoose.connect(process.env.mongo_db_url ||'mongodb://localhost/go-gaga-app', {
+mongoose.connect('mongodb+srv://admin_nishant:Nishantnn1234@cluster0-a3gfd.mongodb.net/test?retryWrites=true&w=majority',{
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 
