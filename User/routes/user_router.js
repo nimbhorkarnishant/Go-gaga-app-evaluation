@@ -7,6 +7,7 @@ const User = require('./../model/user_model')
 router.get('/list',async (req,res) =>{
   var message_data=req.flash("message");
   User.find({}, function(err, users) {
+      console.log(err);
       res.render('templates/user/list_of_friend',{
         title:"Friends List",
         user:users,
