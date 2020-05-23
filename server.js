@@ -8,7 +8,7 @@ const user_router=require('./User/routes/user_router')
 
 var PORT= process.env.PORT || 80;
 
-mongoose.connect('mongodb://localhost/go-gaga-app', {
+mongoose.connect(process.env.mongo_db_url ||'mongodb://localhost/go-gaga-app', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 
@@ -19,7 +19,6 @@ app.use(express.static(__dirname + '/User/views/static'));
 app.use(express.urlencoded({ extended: false }))
 app.use(session({secret: "Shh, its a secret!",saveUninitialized: true,resave: true}));
 app.use(flash());
-
 
 
 
