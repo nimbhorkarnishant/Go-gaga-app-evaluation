@@ -6,6 +6,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 const user_router=require('./User/routes/user_router')
 
+var PORT= process.env.PORT || 5000;
 
 mongoose.connect('mongodb://localhost/go-gaga-app', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
@@ -35,4 +36,4 @@ app.get('/',async (req,res) =>{
 })
 
 
-app.listen(5000)
+app.listen(PORT)
