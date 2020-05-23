@@ -1,0 +1,47 @@
+<%- include('../header') %>
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row align-items-center">
+            <div class="col-5">
+                <h4 class="page-title">Friend List</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+              <div class="card-body">
+                  <div class="d-md-flex align-items-center">
+                  <div>
+                  <h4 class="card-title">Friend List</h4>
+              </div>
+            </div>
+        </div>
+      <div class="table-responsive">
+      <table class="table v-middle">
+        <thead>
+          <tr class="bg-light">
+            <th class="border-top-0">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i=0; i< user.length; i++) {%>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="m-r-10"><a class="btn btn-circle btn-info text-white"><%=user[i].first_name[0]%><%=user[i].last_name[0]%></a></div>
+                <div class="">
+                  <h4 class="m-b-0 font-16"><%=user[i].first_name%> <%=user[i].last_name%></h4>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <%}%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<%- include('../footer') %>
