@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('./../model/user_model')
 
 
-
+// return the all user
 router.get('/list',async (req,res) =>{
   var message_data=req.flash("message");
   User.find({}, function(err, users) {
@@ -16,6 +16,7 @@ router.get('/list',async (req,res) =>{
   });
 })
 
+
 router.get('/add',async (req,res) =>{
   var message_data=req.flash("message");
   res.render('templates/user/add_friend',
@@ -26,6 +27,7 @@ router.get('/add',async (req,res) =>{
   });
 })
 
+//saving data to database
 router.post('/adding',async (req,res) =>{
   var first_name=req.body.first_name;
   var last_name=req.body.last_name;
