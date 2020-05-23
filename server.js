@@ -36,4 +36,4 @@ app.get('/',async (req,res) =>{
 })
 
 
-app.listen(PORT);
+app.listen(5000);
