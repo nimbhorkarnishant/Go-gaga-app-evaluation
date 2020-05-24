@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= title%></title>
-    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <link href="../../css/style.min.css" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
@@ -14,7 +16,7 @@
             <a class="navbar-brand" href="/gogaga/list">
               <span class="logo-text">Go-Gaga-App</span>
             </a>
-            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
           </div>
       </nav>
 			<% if (message.length!=0) {%>
@@ -28,7 +30,7 @@
         <div class="scroll-sidebar">
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/gogaga/list" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Friends</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/gogaga/list" aria-expanded="false"><i class='fas fa-users'></i><span class="hide-menu">Friends</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/gogaga/add" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu">Add Friend</span></a></li>
                 </ul>
             </nav>
